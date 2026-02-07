@@ -1,17 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:news_app/core/routes_maneger.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const NewsApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  // This widget is the root of your application.
+class NewsApp extends StatelessWidget {
+  const NewsApp({super.key});
+  
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      
+      debugShowCheckedModeBanner: false,
+      onGenerateRoute: RoutesManeger.getRoute,
+      initialRoute: RoutesManeger.mainlayout,
+
     );
   }
 }
