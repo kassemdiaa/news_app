@@ -12,9 +12,31 @@ class CategoryItem extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         color: ColorsManegar.white,
-        borderRadius: BorderRadius.circular(16.r),
+        borderRadius: BorderRadius.circular(32.r),
       ),
-      child: Image.asset(imagePath),
+      child: Stack(
+        children: [
+          ClipRRect(
+            borderRadius: BorderRadiusGeometry.circular(32.r),
+            child: Image.asset(imagePath),
+          ),
+          Center(
+            child: Column(
+              children: [
+                SizedBox(height: 20.h),
+                Text(
+                  title,
+                  style: TextStyle(
+                    color: ColorsManegar.white,
+                    fontSize: 26.sp,
+                    fontWeight: FontWeight.w800,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

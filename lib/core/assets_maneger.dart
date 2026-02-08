@@ -6,4 +6,5 @@ abstract class AssetsManeger {
   static const String science = 'assets/images/science_dark.png';
   static const String sport = 'assets/images/sport_dark.png';
   static const String technology = 'assets/images/technology_dark.png';
+  static const String goodMorning = 'assets/images/GoodMorning.png';
 }
