@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:news_app/core/routes_maneger.dart';
 
 void main() {
@@ -10,11 +11,16 @@ class NewsApp extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      onGenerateRoute: RoutesManeger.getRoute,
-      initialRoute: RoutesManeger.mainlayout,
-
+    return ScreenUtilInit(
+      designSize: const Size(416, 870),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      builder: (context, child) => MaterialApp(
+        debugShowCheckedModeBanner: false,
+        onGenerateRoute: RoutesManeger.getRoute,
+        initialRoute: RoutesManeger.mainlayout,
+      
+      ),
     );
   }
 }
