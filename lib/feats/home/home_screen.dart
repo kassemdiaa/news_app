@@ -19,7 +19,7 @@ class HomeScreen extends StatelessWidget {
         SizedBox(height: 20.h),
         Expanded(
           child: ListView.separated(
-            padding: EdgeInsets.symmetric(horizontal: 10.w),
+            padding: EdgeInsets.symmetric(horizontal: 10.w,vertical: 10.h),
             itemBuilder: (context, index) => InkWell(
               onTap: () {
                 onCategoryItemClicked(CategoryModel.categories[index]);
