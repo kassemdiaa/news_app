@@ -18,8 +18,23 @@ class ArticleWidget extends StatelessWidget {
       child: Column(
         children: [
           ClipRRect(
-            borderRadius: BorderRadiusGeometry.circular(20.r),
-            child: Image.asset(article.urlToImage ?? 'assets/placeholder.png'),
+            borderRadius: BorderRadius.circular(20.r),
+            child: Image.network(
+              article.urlToImage ?? 'https://via.placeholder.com/400x200?text=No+Image',
+              height: 200.h,
+              width: double.infinity,
+              fit: BoxFit.cover,
+              errorBuilder: (context, error, stackTrace) {
+                return Container(
+                  height: 200.h,
+                  width: double.infinity,
+                  color: Colors.grey,
+                  child: Center(
+                    child: Text('Image failed to load'),
+                  ),
+                );
+              },
+            ),
           ),
           SizedBox(height: 10.h),
           Text(

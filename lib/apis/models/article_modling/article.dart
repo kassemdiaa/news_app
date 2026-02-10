@@ -1,4 +1,5 @@
-import 'package:news_app/apis/models/article_modling/source_of_art.dart';
+
+import 'package:news_app/apis/models/source_modling/source.dart';
 
 class Articles {
   Source? source;

@@ -2,16 +2,16 @@ import 'package:news_app/apis/models/source_modling/source.dart';
 
 class SourceResponce {
   String? status;
-  List<Sources>? sources;
+  List<Source>? sources;
 
   SourceResponce({this.status, this.sources});
 
   SourceResponce.fromJson(Map<String, dynamic> json) {
     status = json['status'];
     if (json['sources'] != null) {
-      sources = <Sources>[];
+      sources = <Source>[];
       json['sources'].forEach((v) {
-        sources!.add(new Sources.fromJson(v));
+        sources!.add(new Source.fromJson(v));
       });
     }
   }
