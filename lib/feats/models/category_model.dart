@@ -16,43 +16,43 @@ class CategoryModel {
   });
   static List<CategoryModel> categories = [
     CategoryModel(
-      id: 'id',
+      id: 'business',
       title: 'Business',
       imagePath: AssetsManeger.busniess,
       bgColor: ColorsManegar.black,
     ),
     CategoryModel(
-      id: 'id',
+      id: 'entertainment',
       title: 'Entertainment',
       imagePath: AssetsManeger.entertainment,
       bgColor: ColorsManegar.black,
     ),
     CategoryModel(
-      id: 'id',
+      id: 'general',
       title: 'General',
       imagePath: AssetsManeger.general,
       bgColor: ColorsManegar.black,
     ),
     CategoryModel(
-      id: 'id',
+      id: 'health',
       title: 'Helth',
       imagePath: AssetsManeger.helth,
       bgColor: ColorsManegar.black,
     ),
     CategoryModel(
-      id: 'id',
+      id: 'science',
       title: 'Science',
       imagePath: AssetsManeger.science,
       bgColor: ColorsManegar.black,
     ),
     CategoryModel(
-      id: 'id',
+      id: 'sports',
       title: 'Sport',
       imagePath: AssetsManeger.sport,
       bgColor: ColorsManegar.black,
     ),
     CategoryModel(
-      id: 'id',
+      id: 'technology',
       title: 'Technology',
       imagePath: AssetsManeger.technology,
       bgColor: ColorsManegar.black,

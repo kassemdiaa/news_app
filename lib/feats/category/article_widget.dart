@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:news_app/apis/models/article_modling/article.dart';
 import 'package:news_app/core/colors_manegar.dart';
-import 'package:news_app/feats/models/article_model.dart';
+
 
 class ArticleWidget extends StatelessWidget {
   const ArticleWidget({super.key, required this.article});
-  final ArticleModel article;
+  final Articles article;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -18,11 +19,11 @@ class ArticleWidget extends StatelessWidget {
         children: [
           ClipRRect(
             borderRadius: BorderRadiusGeometry.circular(20.r),
-            child: Image.asset(article.urlToImage),
+            child: Image.asset(article.urlToImage ?? 'assets/placeholder.png'),
           ),
           SizedBox(height: 10.h),
           Text(
-            article.description,
+            article.description ?? 'No description available',
             style: TextStyle(
               color: ColorsManegar.white,
               fontWeight: FontWeight.w500,
@@ -34,7 +35,7 @@ class ArticleWidget extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                article.author,
+                article.author ?? 'Unknown Author',
                 style: TextStyle(
                   color: ColorsManegar.white,
                   fontWeight: FontWeight.w500,
@@ -42,7 +43,7 @@ class ArticleWidget extends StatelessWidget {
                 ),
               ),
               Text(
-                article.publishedAt,
+                article.publishedAt ?? 'Unknown Date',
                 style: TextStyle(
                   color: ColorsManegar.white,
                   fontWeight: FontWeight.w500,
